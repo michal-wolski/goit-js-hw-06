@@ -14,12 +14,33 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const url = images.map(images => images.url);
-const alt = images.map(images => images.alt);
-const $ul = document.getElementsByClassName("gallery");
-console.log(url);
-console.log(alt);
-console.log($ul);
+
+const $ul = document.querySelector(".gallery");
+const newImg = []
+for (const img of images){
+  newImg.push(`<li class="list-img"><img src=${img.url} alt=${img.alt}></li>`)
+}
+const imgString = newImg.join("")
+
+$ul.insertAdjacentHTML("beforeend", imgString);
+  
+  
+  
+  
+  
+  
+  
+  
+  // // console.log(url+alt)
+// const addNewImg = url.map((url) => `<li class="list-img new"><img src=${url} alt=alt></li>`).join("");
+  // console.log(addNewImg);
+
+// const url = images.map(images => images.url);
+// const alt = images.map(images => images.alt);
+// const x = images.map(images => images);
+// // console.log(url);
+// console.log(alt);
+// console.log($ul);
 
 // function createImg(element) {
 //   const $ul = document.getElementsByClassName("gallery");
