@@ -8,13 +8,16 @@ const ingredients = [
   'Condiments',
 ];
 
-
+const fragment = document.createDocumentFragment();
+const $ul = document.getElementById("ingredients")
 function createLi(element) {
-  const $ul = document.getElementById("ingredients")
   const $li = document.createElement("li");
   $li.appendChild(document.createTextNode(element));
   $li.setAttribute("class", "item");
-  $ul.appendChild($li);
+  fragment.appendChild($li);
 }
+
 ingredients.forEach(createLi);
 
+
+$ul.append(fragment)
