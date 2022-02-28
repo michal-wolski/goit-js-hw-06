@@ -17,7 +17,9 @@ $form.addEventListener("submit", (e) => {
     if (validation == false) {
         alert("Proszę uzupełnić wszystkie pola")
     }
-    console.log(elements);
+    else {console.log(elements);
+        $form.reset();}
+    
     
 })
 
