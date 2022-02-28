@@ -10,7 +10,7 @@ const $input = document.querySelector("#validation-input");
 $input.addEventListener("input", (validation));
 
 function validation(e) {
-  if (e.target.value.length >= e.target.dataset.length) {
+  if (e.target.value.length == e.target.dataset.length) {
     e.target.classList.add("valid");
     e.target.classList.remove("invalid")
   } else {
